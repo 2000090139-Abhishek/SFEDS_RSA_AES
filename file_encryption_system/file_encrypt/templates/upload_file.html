@@ -1,0 +1,14 @@
+<!-- file_encrypt/templates/file_encrypt/upload_file.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Upload File</h2>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload</button>
+  </form>
+  <br>
+  <a href="{% url 'file_encrypt:file_list' %}">Back to File List</a>
+{% endblock %}
