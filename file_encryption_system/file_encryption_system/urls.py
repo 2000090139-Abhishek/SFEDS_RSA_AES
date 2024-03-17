@@ -5,5 +5,5 @@ urlpatterns = [
     
     path('admin/', admin.site.urls),
     path('file_encrypt/', include('file_encrypt.urls')),
-    # path('', include('file_encrypt.urls')),
+    path('', include('file_encrypt.urls')),
 ]
